@@ -1,0 +1,411 @@
+:root {
+    --color-primario: #1462d7;
+    --color-oscuro: #011140;
+    --color-claro: #f7f7f7;
+    --color-blanco: #ffffff;
+    --color-texto: #333333;
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fuente-principal);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-claro);
+    color: var(--color-texto);
+}
+
+
+/* =========================
+   CABECERA
+========================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: var(--color-oscuro);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--color-primario);
+}
+
+
+/* =========================
+   PORTADA / HERO
+========================= */
+
+.hero {
+    background: linear-gradient(
+        rgba(1, 17, 64, 0.75),
+        rgba(20, 98, 215, 0.65)
+    ), url('../img/hero.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 750px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.btn-primary {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+
+    padding: 15px 30px;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0d4fac;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+.acerca,
+.intereses,
+.objetivos,
+.contactos {
+    padding: 60px 50px;
+    text-align: center;
+}
+
+.acerca {
+    background-color: white;
+}
+
+.intereses {
+    background-color: var(--color-claro);
+}
+
+.objetivos {
+    background-color: white;
+}
+
+.contactos {
+    background-color: var(--color-claro);
+}
+
+.acerca h2,
+.intereses h2,
+.objetivos h2,
+.contactos h2 {
+    color: var(--color-oscuro);
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   TARJETA SOBRE MÍ
+========================= */
+
+.grid-yo {
+    display: grid;
+    grid-template-columns: minmax(300px, 700px);
+    justify-content: center;
+}
+
+.card-acerca {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+}
+
+.card-acerca:hover {
+    transform: translateY(-5px);
+}
+
+.card-acerca img {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card-acerca h3 {
+    color: var(--color-primario);
+    margin-bottom: 10px;
+}
+
+.card-acerca p {
+    line-height: 1.6;
+}
+
+
+/* =========================
+   INTERESES
+========================= */
+
+.grid-intereses {
+    display: grid;
+    grid-template-columns: minmax(300px, 600px);
+    justify-content: center;
+}
+
+.card-intereses {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+}
+
+.card-intereses:hover {
+    transform: translateY(-5px);
+}
+
+.card-intereses img {
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.card-intereses h3 {
+    color: var(--color-primario);
+    margin-bottom: 15px;
+}
+
+.card-intereses ul {
+    list-style-position: inside;
+    text-align: left;
+    line-height: 2;
+}
+
+
+/* =========================
+   OBJETIVOS
+========================= */
+
+.grid-objetivos {
+    display: grid;
+    grid-template-columns: minmax(300px, 600px);
+    justify-content: center;
+}
+
+.card-objetivos {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+}
+
+.card-objetivos:hover {
+    transform: translateY(-5px);
+}
+
+.card-objetivos img {
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.card-objetivos h3 {
+    color: var(--color-primario);
+    margin-bottom: 15px;
+}
+
+.card-objetivos ul {
+    list-style-position: inside;
+    text-align: left;
+    line-height: 2;
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+.grid-contactos {
+    display: grid;
+    grid-template-columns: minmax(300px, 600px);
+    justify-content: center;
+}
+
+.card-contactos {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-contactos img {
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.card-contactos h3 {
+    color: var(--color-primario);
+    margin-bottom: 10px;
+}
+
+.card-contactos p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   BOTONES DE CONTACTO
+========================= */
+
+.card-contactos a {
+    text-decoration: none;
+}
+
+#enlace-correo,
+#ig,
+#github {
+    display: inline-block;
+
+    background-color: var(--color-primario);
+    color: white;
+
+    border: none;
+
+    padding: 10px 20px;
+
+    margin: 5px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#enlace-correo:hover,
+#ig:hover,
+#github:hover {
+    background-color: #0d4fac;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   DISEÑO RESPONSIVO
+========================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .navbar {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .navbar a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .acerca,
+    .intereses,
+    .objetivos,
+    .contactos {
+        padding: 50px 20px;
+    }
+}
