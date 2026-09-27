@@ -1,0 +1,193 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi portafolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- CABECERA -->
+    <header class="header">
+
+        <div class="logo"> Diego Alejandro 🚀 </div>
+
+        <nav class="navbar">
+            <a href="#inicio">Inicio</a>
+            <a href="#sobremi">Sobre mí</a>
+            <a href="#intereses">Intereses</a>
+            <a href="#objetivos">Objetivos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- PORTADA -->
+        <section id="inicio" class="hero">
+
+            <div class="hero-content">
+
+                <h1>Hola, soy Alejandro 👋</h1>
+
+                <p>
+                    Soy estudiante del Técnico Profesional en Programación Web
+                    de la Universidad de Caldas. Sigue desplazándote para conocer más de mí.
+                </p>
+
+                <a href="#contacto">
+                    <button class="btn-primary">Contáctame</button>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOBRE MÍ -->
+        <section id="sobremi" class="acerca">
+
+            <h2>Sobre mí</h2>
+
+            <div class="grid-yo">
+
+                <article class="card-acerca">
+
+                    <img src="img/yo.jpeg" alt="Imagen de Alejandro">
+
+                    <h3>¿Qué hago?</h3>
+
+                    <p>
+                        Me gusta mucho aprender, compartir con mis amigos y estudiar.
+                        También me encanta enfrentarme a retos nuevos y resolver problemas.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTERESES -->
+        <section id="intereses" class="intereses">
+
+            <h2>Mis intereses</h2>
+
+            <div class="grid-intereses">
+
+                <article class="card-intereses">
+
+                    <img src="img/inereses.png" alt="Imagen sobre mis intereses">
+
+                    <h3>Me gusta mucho...</h3>
+
+                    <ul>
+                        <li>Programar</li>
+                        <li>Resolver problemas</li>
+                        <li>Trabajar en equipo</li>
+                        <li>Aprender cosas nuevas</li>
+                        <li>Ayudar a otros</li>
+                        <li>Compartir con los demás</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- OBJETIVOS -->
+        <section id="objetivos" class="objetivos">
+
+            <h2>Mis objetivos</h2>
+
+            <div class="grid-objetivos">
+
+                <article class="card-objetivos">
+
+                    <img src="img/metas.jpg" alt="Imagen sobre mis metas">
+
+                    <h3>Quiero...</h3>
+
+                    <ul>
+                        <li>Ir a la Universidad</li>
+                        <li>Estudiar Inteligencia Artificial</li>
+                        <li>Conocer nuevas personas</li>
+                        <li>Aprender mucho más</li>
+                        <li>Graduarme</li>
+                        <li>Conseguir empleo</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="contactos">
+
+            <h2>Contacto</h2>
+
+            <div class="grid-contactos">
+
+                <article class="card-contactos">
+
+                    <img src="img/contacto.jpg" alt="Imagen de contacto">
+
+                    <h3>Contáctame</h3>
+
+                    <p>
+                        ¿Quieres conocer más acerca de mí?
+                        Puedes ver mis enlaces y conocer un poco más de lo que hago.
+                    </p>
+
+                    <a id="enlace-correo" href="#">
+                        Correo
+                    </a>
+
+                    <a href="https://www.instagram.com/alejandro.arias__/" target="_blank">
+                        <button id="ig">Instagram</button>
+                    </a>
+
+                    <a href="https://github.com/Alejandroo59" target="_blank">
+                        <button id="github">GitHub</button>
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- SCRIPT PARA EL CORREO -->
+    <script>
+
+        const datos = {
+            correo: "diegoalejandroariasgalvis59@gmail.com"
+        };
+
+        const botonContacto = document.querySelector("#enlace-correo");
+
+        botonContacto.href =
+            `mailto:${datos.correo}?subject=Contacto%20desde%20mi%20portafolio`;
+
+    </script>
+
+</body>
+
+</html>
+```
