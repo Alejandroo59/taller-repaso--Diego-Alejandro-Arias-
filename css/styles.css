@@ -1,6 +1,8 @@
 :root {
     --color-primario: #1462d7;
+    --color-claro-tema-oscuro: #1E90FF;
     --color-oscuro: #011140;
+    --color-clarooscuro-tema-oscuro: #68cae3;
     --color-claro: #f7f7f7;
     --color-blanco: #ffffff;
     --color-texto: #333333;
@@ -21,6 +23,8 @@ html {
 body {
     background-color: var(--color-claro);
     color: var(--color-texto);
+    /* Tus otros estilos... */
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 
@@ -373,39 +377,45 @@ body {
 }
 
 
-/* =========================
-   DISEÑO RESPONSIVO
-========================= */
+body.tema-oscuro,
+#sobremi.tema-oscuro,
+#intereses.tema-oscuro,
+#objetivos.tema-oscuro,
+#contacto.tema-oscuro,
+.titulos-principales.tema-oscuro {
+    color: var(--color-claro-tema-oscuro);
+    background-color: #1a1a1a;
 
-@media (max-width: 768px) {
+}
 
-    .header {
-        flex-direction: column;
-        padding: 20px;
-    }
+/* Modifica también las tarjetas para que resalten en el fondo negro */
+body.tema-oscuro,
+#yo-id.tema-oscuro,
+#intereses-id.tema-oscuro,
+#objetivos-id.tema-oscuro,
+#contacto-id.tema-oscuro {
+    background-color: #2c2c2c;
+    color: white;
+    border: 1px solid #444;
+}
 
-    .navbar {
-        margin-top: 15px;
-        text-align: center;
-    }
+.titulos-secundarios.tema-oscuro {
+    color: var(--color-clarooscuro-tema-oscuro);
+}
 
-    .navbar a {
-        display: inline-block;
-        margin: 5px;
-    }
+/* Estilos para el botón superior */
+.btn-tema {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
 
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .acerca,
-    .intereses,
-    .objetivos,
-    .contactos {
-        padding: 50px 20px;
-    }
+.btn-tema:hover {
+    background-color: white;
+    color: var(--color-oscuro);
 }
